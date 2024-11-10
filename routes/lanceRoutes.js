@@ -2,7 +2,7 @@ const express = require('express');
 const Lance = require('../models/Lance');
 const router = express.Router();
 
-// POST: Criar um novo lance
+
 router.post('/', async (req, res) => {
     try {
         const { valor, ofertante } = req.body;
@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// GET: Obter o lance atual mais alto
+// pegar o lance mais alto
 router.get('/atual', async (req, res) => {
     try {
         const maiorLance = await Lance.findOne().sort({ valor: -1 });
