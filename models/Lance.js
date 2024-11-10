@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const lanceSchema = new mongoose.Schema({
-    valor: { // Valor do lance
+    valor: { 
         type: Number,
         required: true,
     },
-    ofertante: { // Nome do ofertante
+    ofertante: { 
         type: String,
         required: true,
     },
-    data: { // Data do lance
+    data: { 
         type: Date,
         default: Date.now,
     },
